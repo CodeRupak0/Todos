@@ -1,10 +1,17 @@
+
+import time
+
+now= time.strftime("%b %d, %Y  %H:%M:%S")
+print("It is ",now)
+
+
 while True:
     user_action = input("Type show or add or edit or complete or exit:")
     user_action = user_action.strip().upper()
     if user_action.startswith("ADD"):
         todo = user_action[4:] + "\n"  # here \n is used to break lines in text file which creates line break in output screen.
-        file = open('todos.txt', 'r')  #file opens in read mode and store in variable named file
-        todos = file.readlines()  #The above two lines is used to first read the existing todos in the txt file and add the other todos in the existing list.
+        file = open('todos.txt', 'r')  # file opens in read mode and store in variable named file
+        todos = file.readlines()  # The above two lines is used to first read the existing todos in the txt file and add the other todos in the existing list.
         file.close()
         todos.append(todo)
         file = open('todos.txt','w')  # file=open() access the text file created and 'w ' is used to write the info in the text file.

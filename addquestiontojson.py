@@ -1,5 +1,31 @@
 import json
 
+def question():
+    quest = input("Enter the question: ")
+    return quest
+
+def answer_choice():
+    alternative = []
+    alt = input("Enter answer alternatives separated by comma, Eg-a,b,c,d: ")
+    alternative = list(alt.split(","))  # splits the string at the place of comma and creates the list of it.
+    alternative = [item.strip() for item in alternative]  # Remove leading and trailing spaces from list objects.
+    return alternative
+
+def correct_answer():
+    correct_ans = int(input("Enter the correct answer alternative number: "))
+    return correct_ans
+
+def dictionary(quest,alternative,correct_ans):
+    dict = {"question": quest.strip(),
+            "option": alternative,
+            "correct_answer": correct_ans}
+    data.append(dict)  # Add the new dictionary to the existing list inside data
+    return data
+
+"""Write the updated list back to the file."""
+def filewrt (filepath,data):
+    with open(filepath, 'w') as file:
+            json.dump(data, file, indent=2)  # indent pretty-printing
 
 try:
     with open("quiz.json", 'r') as file:
@@ -11,20 +37,11 @@ except json.JSONDecodeError:
 if not isinstance(data, list):
     data = []  # If data is not a list, start with an empty list
 while True:
-    alternative=[]
-    quest=input("Enter the question: ")
-    alt=input("Enter answer alternatives separated by comma, Eg-a,b,c,d: ")
-    alternative=list(alt.split(","))   # splits the string at the place of comma and creates the list of it.
-    alternative = [item.strip() for item in alternative]   # Remove leading and trailing spaces from list objects
-    correct_ans=int(input("Enter the correct answer alternative number: "))
-    dict={"question":quest.strip(),
-          "option":alternative,
-          "correct_answer": correct_ans}
-    data.append(dict)   # Add the new dictionary to the existing list inside data
-
-    # Write the updated list back to the file.
-    with open("quiz.json", 'w') as file:
-            json.dump(data, file, indent=2)  # indent pretty-printing
+    quest= question()
+    alternative = answer_choice()
+    correct_ans = correct_answer()
+    data = dictionary(quest,alternative,correct_ans)
+    filewrt("quiz.json",data)
     user=input("Press - 'Y' to add new question and Press - 'N' to Finish: ")
     if user.upper().strip()=='Y':
         continue

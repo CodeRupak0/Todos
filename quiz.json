@@ -1,7 +1,52 @@
-[{"question": "Which is the largest mammal in the Earth?",
-  "option": ["Elephant","Dolphin","Whale","Giraffe"],
-  "correct_answer": 3},
-  {"question": "Which is the smallest planet in the solar system?",
-  "option": ["Mercury","Venus","Mars","Earth"],
-  "correct_answer": 1}
+[
+  {
+    "question": "Which is the largest Planet of the Solar system?",
+    "option": [
+      "Sun",
+      "Jupiter",
+      "Moon",
+      "Earth"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Where is Nepal located?",
+    "option": [
+      "Asia",
+      "Africa",
+      "Antratica",
+      "US"
+    ],
+    "correct_answer": 1
+  },
+  {
+    "question": "Which is the highest peak in the world?",
+    "option": [
+      "Amadblam",
+      "Mt-K2",
+      "Mt-Everest",
+      "Annapurna"
+    ],
+    "correct_answer": 3
+  },
+  {
+    "question": "Which is the largest river of nepal?",
+    "option": [
+      "Koshi",
+      "Karnali",
+      "Gandaki",
+      "Bheri"
+    ],
+    "correct_answer": 2
+  },
+  {
+    "question": "Who is titled as Great Poet of Nepal?",
+    "option": [
+      "LP devkota",
+      "Bhanuubhakta acharya",
+      "Rupak khadka",
+      "Motiram bhatta"
+    ],
+    "correct_answer": 1
+  }
 ]

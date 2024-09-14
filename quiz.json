@@ -1,0 +1,7 @@
+[{"question": "Which is the largest mammal in the Earth?",
+  "option": ["Elephant","Dolphin","Whale","Giraffe"],
+  "correct_answer": 3},
+  {"question": "Which is the smallest planet in the solar system?",
+  "option": ["Mercury","Venus","Mars","Earth"],
+  "correct_answer": 1}
+]

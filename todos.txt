@@ -2,3 +2,5 @@ play
 sing
 wash clothes
 PLAY FOOTBALL
+Hello
+Hi
